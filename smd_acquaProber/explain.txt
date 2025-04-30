@@ -1,0 +1,8 @@
+to run the software:
+python3 server.py ---> 127.0.0.1:5000
+python3 sensor_reader.py
+
+Later you can create a .sh script to execute at the same time the two commands
+
+If you are trying it on a PC, just for a try, it will generate some ranndom value
+because on the PC there is not the i2c or ADC.
