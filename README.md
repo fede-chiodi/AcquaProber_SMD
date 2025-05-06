@@ -1,18 +1,48 @@
 # AcquaProber
 
-REQUIRED MATERIAL
-
-ACQUARIUM REQUIRMENTS:
-  1. [PH detector sensor](https://it.aliexpress.com/item/1005004359552599.html?src=google&pdp_npi=4%40dis!EUR!10.39!10.39!!!!!%40!12000028897270491!ppc!!!&src=google&albch=shopping&acnt=272-267-0231&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=it1005004359552599&ds_e_product_merchant_id=561337230&ds_e_product_country=IT&ds_e_product_language=it&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=20730495829&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMI4NCrmL_hiwMVGJSDBx3qawxBEAQYBiABEgKXZvD_BwE)
-  2. [Turbidity sensor](https://it.aliexpress.com/item/4000460829861.html?src=google&pdp_npi=4%40dis!EUR!6.75!5.89!!!!!%40!12000037978291569!ppc!!!&src=google&albch=shopping&acnt=272-267-0231&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=it4000460829861&ds_e_product_merchant_id=108988894&ds_e_product_country=IT&ds_e_product_language=it&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=20730495829&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMI0cfJ48DhiwMVQZFoCR00LyUvEAQYAiABEgKyBvD_BwE)
-  3. [Water Temperature Sensor](https://it.aliexpress.com/item/1005001601986600.html?spm=a2g0o.productlist.main.1.723f45UM45UMs6&algo_pvid=14250dc7-5a0c-4166-ac1c-15832d9021e0&algo_exp_id=14250dc7-5a0c-4166-ac1c-15832d9021e0-0&pdp_ext_f=%7B%22order%22%3A%221624%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21EUR%211.15%210.96%21%21%211.18%210.98%21%40%2112000025844052121%21sea%21IT%210%21ABX&curPageLogUid=o3nggKPL9Ioc&utparam-url=scene%3Asearch%7Cquery_from%3A)
-  4. [Conductivity Sensor](https://it.aliexpress.com/item/1005001698342637.html?src=google&pdp_npi=4%40dis!EUR!3.79!3.79!!!!!%40!12000017200081674!ppc!!!&src=google&albch=shopping&acnt=742-864-1166&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=it1005001698342637&ds_e_product_merchant_id=107739884&ds_e_product_country=IT&ds_e_product_language=it&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=22118443566&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMI04y8hsPhiwMVlpeDBx0pGzxdEAQYAyABEgIkVvD_BwE)
-  5. [Waterproof ultrasonic module - water level](https://it.aliexpress.com/item/1005006781704017.html?pdp_npi=4%40dis%21EUR%215.98%211.79%21%21%2144.48%2113.34%21%4021016e6c17397951970332163d1167%2112000038278389931%21affd%21%21%21&dp=EAIaIQobChMI3Y7W4MvhiwMV7KaDBx31qjkiEAQYASABEgKoHfD_BwE&gad_source=1&aff_fcid=45bf16f4b91040899a81e4705e7b967c-1740581606494-06589&aff_fsk&aff_platform=api-new-product-query&sk&aff_trace_key=45bf16f4b91040899a81e4705e7b967c-1740581606494-06589&terminal_id=b6bfffc32ed042009da1fc2ac182fcaf&afSmartRedirect=y)
-  6. [Water Level sensor](https://it.aliexpress.com/item/32280545086.html?src=google&pdp_npi=4%40dis!EUR!0.98!0.90!!!!!%40!59118911776!ppc!!!&src=google&albch=shopping&acnt=272-267-0231&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=it32280545086&ds_e_product_merchant_id=107690358&ds_e_product_country=IT&ds_e_product_language=it&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=20730495829&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=EAIaIQobChMIgeKxj83hiwMVDq6DBx1q6gsGEAQYASABEgLFN_D_BwE)
-  7. [Display raspberry](https://it.aliexpress.com/item/1005005089761042.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.1.4ebbqw3zqw3z7v&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40196.366991.0&scm_id=1007.40196.366991.0&scm-url=1007.40196.366991.0&pvid=fcd54e66-d8e8-448c-8f4b-eec54b7def0a&_t=gps-id:pcDetailTopMoreOtherSeller,scm-url:1007.40196.366991.0,pvid:fcd54e66-d8e8-448c-8f4b-eec54b7def0a,tpp_buckets:668%232846%238111%231996&pdp_ext_f=%7B%22order%22%3A%2228%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%7D&pdp_npi=4%40dis%21EUR%2135.49%2129.36%21%21%2136.45%2130.15%21%40%2112000033849800041%21rec%21IT%21%21ABXZ&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A)
-  8. [Binary support Image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.danireef.com%2F2016%2F08%2F05%2Finterzoo-2016-lo-stand-aquario-e-il-sistema-neo-solution%2F2%2F&psig=AOvVaw0-52pn0vYMwOjLD0pDwkH5&ust=1740669254593000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD82LvQ4YsDFQAAAAAdAAAAABAE) - The track will be suspended above the aquarium and will have a serpentine shape. In these tracks we will have two steppers that will pull two cables/lines that will allow the movement of the probe in the aquarium.
-  10. [Water Pump](https://www.amazon.it/Acqua-Pompa-Sommergibile-Sommersa-Acquario/dp/B0CBBZ76V2/ref=asc_df_B0CBBZ76V2?mcid=5b720d5e421a38aa902637110a886c79&tag=googshopit-21&linkCode=df0&hvadid=701238957097&hvpos=&hvnetw=g&hvrand=16196693864351005736&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1008296&hvtargid=pla-2198870405891&psc=1&gad_source=1)
-  11. Fish Feeder - with timer that provides food to the aquarium every x minutes. It has a valve controlled by a servo motor.
-
-PROBER REQUIREMENTS:
-  1. [ESP32 with CAM integrated](https://it.aliexpress.com/item/1005007495763537.html?srcSns=sns_WhatsApp&spreadType=socialShare&bizType=ProductDetail&social_params=61041208142&aff_fcid=adea551fead5494fa3ff620b375b117d-1743082578937-00674-_EuWAxxS&tt=MG&aff_fsk=_EuWAxxS&aff_platform=default&sk=_EuWAxxS&aff_trace_key=adea551fead5494fa3ff620b375b117d-1743082578937-00674-_EuWAxxS&shareId=61041208142&businessType=ProductDetail&platform=AE&terminal_id=da5dd1a10b384e2e8e6cb7a9a8e7adf9&afSmartRedirect=y)
+COLLEGAMENTI SENSORI ---> MODULO ADC
+ 
+sensore pH → ADS1115 
+AOUT → A0
+ 
+sensore Torbidità→ ADS1115
+AOUT → A1 
+ 
+sensore Conduttività → ADS1115
+AOUT → A2
+ 
+sensore temperatura → ADS1115 (per sensore di temperatura analogico (TMP36 o LM35)
+AOUT → A3
+ 
+ 
+COLLEGAMENTO SENSORE DI TEMPERATURA (DS18B20 - il nostro) 
+il sensore di temperatura DS18B20 ha un collegamento diretto al raspebbry PI non passando per il modulo ADS1115.
+ 
+ha 3 pin:
+GND
+VCC
+DATA -> GPIO4 (Pin 7) raspberry PI
+⚠️ La resistenza di 4.7kΩ è obbligatoria tra il pin DATA e VCC.
+ 
+COLLEGAMENTI COMUNI
+GND → unito al GND di Raspberry Pi e GND dell'ADS1115
+VCC → unito a 3.3V o 5V
+COLLEGAMENTI RASPBERRY PI ---> MODULO ADC
+ 
+SDA (GPIO2 / Pin 3) -> ADS1115 SDA
+SCL (GPIO3 / Pin 5) -> ADS1115 SCL
+GND (Pin 6) -> ADS1115  GND + sensori GND
+3.3 / 5 V (Pin 1 o 2) -> ADS1115  VDD + sensori VCC
+ 
+ 
+ABILITARE I2C SU RASPBERRY PI 
+sudo raspi-config
+Interfacing Options -> I2C -> Abilita
+ 
+sudo reboot
+ 
+ABILITARE 1-WIRE SU RASPBERRY PI (PER SENSORE TEMPERATURA)
+sudo raspi-config
+Interfacing Options → 1-Wire → Abilita
+ 
+sudo reboot
