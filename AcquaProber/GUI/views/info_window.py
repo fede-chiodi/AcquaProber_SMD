@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout, QFrame
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout, QFrame, QPushButton
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QFont, QPixmap
 import os
@@ -54,6 +54,12 @@ class InfoWindow(QWidget):
         
         fish_frame.setLayout(fish_layout)
         main_layout.addWidget(fish_frame)
+
+        close_window_button = QPushButton("CHIUDI")
+        close_window_button.setStyleSheet("color: black; font-size: 16px; font-weight: bold; margin: 40px; padding: 5px;")
+        close_window_button.clicked.connect(self.close)
+        main_layout.addWidget(close_window_button)
+
 
         self.setLayout(main_layout)
 
