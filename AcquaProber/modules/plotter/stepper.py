@@ -26,6 +26,9 @@ class Stepper:
     def __del__(self):
         for pin in self.__pins:
             GPIO.output(pin, GPIO.LOW)
+    def pause(self):
+        for pin in self.__pins:
+            GPIO.output(pin, GPIO.LOW)
             
     def step(self, direction: bool = True):
         if direction:
@@ -45,6 +48,7 @@ class Stepper:
     def rotate(self, steps: int, direction: bool = True):
         for _ in range(steps):
             self.step(direction)
+        self.pause()
     # move clockwise in a complete revolution
     def move_cw(self):
         self.rotate(self.__spr)
