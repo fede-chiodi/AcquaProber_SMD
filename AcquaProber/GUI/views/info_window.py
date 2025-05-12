@@ -27,7 +27,7 @@ class InfoWindow(QWidget):
         main_layout.addWidget(title)
 
         logo_label = QLabel()
-        logo_path = os.path.join(os.path.dirname(__file__), "acquaprober_logo.png")
+        logo_path = os.path.join("GUI/images", "acquaprober_logo.png")
         if os.path.exists(logo_path):
             pixmap = QPixmap(logo_path).scaled(250, 250, Qt.KeepAspectRatio, Qt.SmoothTransformation)
             logo_label.setPixmap(pixmap)

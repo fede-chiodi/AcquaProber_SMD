@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import QMainWindow, QLabel, QVBoxLayout, QHBoxLayout, QWidget, QPushButton, QGridLayout, QDialog, QFrame
 from PyQt5.QtGui import QPixmap, QFont, QIcon, QCursor
 from PyQt5.QtCore import Qt, QTimer
-from sensor_window_ipc import SensorWindow
-from info_window import InfoWindow
+from GUI.views.sensor_window_ipc import SensorWindow
+from GUI.views.info_window import InfoWindow
 import os
 
 class MainWindow(QMainWindow):
@@ -60,7 +60,7 @@ class MainWindow(QMainWindow):
         main_layout.addWidget(sensor_frame)
 
         logo_label = QLabel()
-        logo_path = os.path.join(os.path.dirname(__file__), "acquaprober_logo.png")
+        logo_path = os.path.join("GUI/images", "acquaprober_logo.png")
         if os.path.exists(logo_path):
             pixmap = QPixmap(logo_path).scaled(300, 300, Qt.KeepAspectRatio, Qt.SmoothTransformation)
             logo_label.setPixmap(pixmap)

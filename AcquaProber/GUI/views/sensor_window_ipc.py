@@ -75,7 +75,7 @@ class SensorWindow(QWidget):
 
             self.plot.setData(self.datas)
 
-        with open("sensors_datas.json", "r") as file:
+        with open("data/sensors_datas.json", "r") as file:
             file_log = json.load(file)
 
         values = [entry[self.sensor_name] for entry in file_log if self.sensor_name in entry]

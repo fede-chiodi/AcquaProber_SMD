@@ -1,6 +1,6 @@
 from multiprocessing import Process, Manager
-from .modules.sensors.collect_data import collect_data
-from .GUI.gui_process import run_gui
+from modules.sensors.collect_data import collect_data
+from GUI.gui_process import run_gui
 
 if __name__ == "__main__":
     with Manager() as manager:

@@ -1,11 +1,11 @@
 import time
 import json
-from sensors.ph_sensor import read_ph
-from sensors.turbidity_sensor import read_turbidity
-from sensors.temperature_sensor import read_temperature
-from sensors.conductivity_sensor import read_conductivity
+from modules.sensors.ph_sensor import read_ph
+from modules.sensors.turbidity_sensor import read_turbidity
+from modules.sensors.temperature_sensor import read_temperature
+from modules.sensors.conductivity_sensor import read_conductivity
 
-DATA_FILE = "sensors_datas.json"
+DATA_FILE = "data/sensors_datas.json"
 
 def read_sensors():
     return {
