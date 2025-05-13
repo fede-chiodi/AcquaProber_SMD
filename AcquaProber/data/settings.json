@@ -1,0 +1,15 @@
+{
+    "feeder_time:": 20,
+    "opening_time": 0.1
+}
+
+/*
+
+FEEDER LIMTIS:
+minimum feeder_time: 60 seconds
+maximum feeder_time: 3600 seconds
+
+minimum_opening_time: 0.1
+maximum_opening_time: 1s
+
+*/
