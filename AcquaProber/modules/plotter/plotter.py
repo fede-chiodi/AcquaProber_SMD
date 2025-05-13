@@ -1,4 +1,4 @@
-from stepper import Stepper
+from modules.plotter.stepper import Stepper
 from threading import Thread
 
 class Plotter:
@@ -129,10 +129,10 @@ def plotter_worker(ipc_dict):
 
 #print(f"Step massimi: {step_counter}")
 
-ipc = {"mode": 1, "x_pos": 20, "y_pos": 40, "status": 1}
-ipc["x_pos"] = int(input("Pos x: "))
-ipc["y_pos"] = int(input("Pos y: "))
-plotter_worker(ipc)
+#ipc = {"mode": 1, "x_pos": 20, "y_pos": 40, "status": 1}
+#ipc["x_pos"] = int(input("Pos x: "))
+#ipc["y_pos"] = int(input("Pos y: "))
+#plotter_worker(ipc)
 
 
 

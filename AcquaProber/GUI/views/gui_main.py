@@ -3,6 +3,7 @@ from PyQt5.QtGui import QPixmap, QFont, QIcon, QCursor
 from PyQt5.QtCore import Qt, QTimer
 from GUI.views.sensor_window_ipc import SensorWindow
 from GUI.views.info_window import InfoWindow
+from GUI.views.plotter_window import PlotterWindow
 import os
 
 class MainWindow(QMainWindow):
@@ -88,7 +89,7 @@ class MainWindow(QMainWindow):
                     color: black;
                 }
             """)
-            btn.clicked.connect(lambda _, l=label: self.open_placeholder_window(l))
+            btn.clicked.connect(lambda _, l=label: self.open_placeholder_window(l, self.shared_dict))
             buttons_layout.addWidget(btn)
 
         main_layout.addLayout(buttons_layout)
@@ -108,10 +109,13 @@ class MainWindow(QMainWindow):
         self.sensor_window = SensorWindow(name, unit, shared_dict)
         self.sensor_window.show()
 
-    def open_placeholder_window(self, btn_name):
+    def open_placeholder_window(self, btn_name, shared_dict):
         if btn_name == "Info":
             self.info_window = InfoWindow(btn_name)
             self.info_window.show()
+        elif btn_name == "Sonda":
+            self.plotter_window = PlotterWindow(shared_dict)
+            self.plotter_window.show()
         else:
             dialog = QDialog(self)
             dialog.setWindowTitle("PLACEHOLDER - TO DEVELOP")
