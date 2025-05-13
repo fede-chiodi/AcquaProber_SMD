@@ -1,6 +1,7 @@
 import json
 from gpiozero import Servo ## for Servo
 import time
+import datetime
 import threading
 
 ### gpiozero
@@ -10,6 +11,8 @@ class Feeder:
         ## 100 seconds it's the minimum time, 2 seconds max opening time 
         self.__feeder_time = feeder_time
         self.__opening_time = opening_time
+        self.__datas = {}
+        self.__filename = "data/settings.json"
         # 0 for inactive, 1 for active
         self.__status = 1
         ## load file datas if invalid values
@@ -21,10 +24,21 @@ class Feeder:
     
     ## load settings from json
     def __load_data(self):
-        with open("data/settings.json") as file:
-            j_file = json.load(file)
-            self.__feeder_time = j_file["feeder_time"]
-            self.__opening_time = j_file["opening_time"]
+        with open(self.__filename, "r") as file:
+            self.__datas = json.load(file)
+            self.__feeder_time = self.__datas["feeder_time"] ### feeder time is in seconds
+            self.__opening_time = self.__datas["opening_time"]
+            
+    def __set_data(self, prop: str, value):
+        new_json = {}
+        with open(self.__filename, "r") as file:
+            new_json = json.load(file)
+        new_json[prop] = value
+        with open(self.__filename, "w") as outfile:
+            json.dump(new_json, outfile)
+            
+        
+            
     
     ## stop feeder auto mode
     def stop(self):
@@ -35,6 +49,10 @@ class Feeder:
         self.__servo.mid()
         time.sleep(self.__opening_time)
         self.__servo.min()
+        ## food level is refactored after expiration, dummy behaviour
+        self.__set_data("food_level", (self.__datas["food_level"] - 1) if self.__datas["food_level"] else 20)
+        self.__set_data("last_feed", datetime.datetime.now().strftime("%H:%M"))
+        
         
     # opens feeder every __feeder_time seconds
     def run(self):
