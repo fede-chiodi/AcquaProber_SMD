@@ -9,7 +9,7 @@ class PlotterWindow(QWidget):
     def __init__(self, shared_dict):
         super().__init__()
         self.setWindowTitle("SONDA")
-        self.setStyleSheet("background-color: #0a0a1a; color: white;")
+        self.setStyleSheet("background-color: #010512; color: white;")
         self.resize(1024, 768)
         self.shared_dict = shared_dict
         self.shared_dict["mode"] = 1
@@ -65,7 +65,7 @@ class PlotterWindow(QWidget):
 
         close_window_button = QPushButton("CHIUDI")
         close_window_button.setStyleSheet(
-            "color: white; font-size: 16px; font-weight: bold; "
+            "color: black; font-size: 16px; font-weight: bold; "
             "margin: 40px; padding: 5px;"
         )
         close_window_button.clicked.connect(self.close)
@@ -77,7 +77,7 @@ class PlotterWindow(QWidget):
         main_layout.addLayout(slider_x_container)
         main_layout.addSpacing(10)
         main_layout.addWidget(close_window_button)
-        main_layout.addSpacing(100)
+        #main_layout.addSpacing(100)
 
         self.setLayout(main_layout)
 
