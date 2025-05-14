@@ -16,7 +16,7 @@ def read_sensors():
      }
 
 def collect_data(shared_dict):
-    while True:
+    while shared_dict["status"]:
        sensors_datas = read_sensors()
        shared_dict.update(sensors_datas)
        try:
@@ -30,5 +30,5 @@ def collect_data(shared_dict):
        with open(DATA_FILE, "w") as file:
            json.dump(file_log, file, indent=2)
 
-       time.sleep(2)
+       time.sleep(2) ## every 2 seconds
 
