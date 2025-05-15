@@ -52,6 +52,8 @@ class Feeder:
         ## food level is refactored after expiration, dummy behaviour
         self.__set_data("food_level", (self.__datas["food_level"] - 1) if self.__datas["food_level"] else 20)
         self.__set_data("last_feed", datetime.datetime.now().strftime("%H:%M"))
+        next_date = datetime.datetime.fromtimestamp(int(datetime.datetime.now().timestamp()) + self.__feeder_time)
+        self.__set_data("next_feed", next_date.strftime("%H:%M"))
         
         
     # opens feeder every __feeder_time seconds
@@ -80,7 +82,14 @@ def feeder_worker(ipc_dict):
     
     
     
-    
+   ##### TRIAL CODE #####
+feed = Servo(6)
+feed.max()
+time.sleep(3)
+feed.mid()
+time.sleep(3)
+feed.min()
+time.sleep(3)
     
                 
                 

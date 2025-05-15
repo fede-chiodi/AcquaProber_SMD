@@ -2,7 +2,8 @@
     "feeder_time:": 20,
     "opening_time": 0.1,
     "food_level": 20,
-    "last_feed": "00:00"
+    "last_feed": "00:00",
+    "next_feed": "00:00"
 }
 
 /*
