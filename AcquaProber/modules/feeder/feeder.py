@@ -1,10 +1,16 @@
 import json
-from gpiozero import Servo ## for Servo
 import time
 import datetime
 import threading
-
+import RPi.GPIO as GPIO
+from gpiozero import Servo, Device
+from gpiozero.pins.pigpio import PiGPIOFactory
 ### gpiozero
+
+DEG_90 = 6.5
+DEG_0 = 2.5
+
+#jkDevice.pin_factory = PiGPIOFactory(host="127.0.0.1") ## changing pin factory
 
 class Feeder:
     def __init__(self, servo_pin: int, feeder_time: int = -1, opening_time: int = -1):
@@ -19,9 +25,10 @@ class Feeder:
         if(feeder_time < 100 or opening_time < 0.1 or opening_time > 1):
             self.__load_data()
         # setting servo and initializing to starting position
-        self.__servo = Servo(servo_pin)
-        self.__servo.min()
-    
+        GPIO.setmode(GPIO.BCM) 
+        GPIO.setup(servo_pin ,GPIO.OUT) 
+        self.__servo = GPIO.PWM(servo_pin, 50)   
+
     ## load settings from json
     def __load_data(self):
         with open(self.__filename, "r") as file:
@@ -46,9 +53,11 @@ class Feeder:
     
     ## feed function
     def feed(self):
-        self.__servo.mid()
+        self.__servo.start(0)
+        self.__servo.ChangeDutyCycle(DEG_90)
         time.sleep(self.__opening_time)
-        self.__servo.min()
+        self.__servo.ChangeDutyCycle(DEG_0)
+        self.__servo.stop(0)
         ## food level is refactored after expiration, dummy behaviour
         self.__set_data("food_level", (self.__datas["food_level"] - 1) if self.__datas["food_level"] else 20)
         self.__set_data("last_feed", datetime.datetime.now().strftime("%H:%M"))
@@ -79,20 +88,10 @@ def feeder_worker(ipc_dict):
     feeder.stop()
     t1.join()
     print("Feeder process terminated correctly!!")
+
+
+
+
     
-    
-    
-   ##### TRIAL CODE #####
-feed = Servo(6)
-feed.max()
-time.sleep(3)
-feed.mid()
-time.sleep(3)
-feed.min()
-time.sleep(3)
-    
-                
-                
-            
-        
-            
+
+
