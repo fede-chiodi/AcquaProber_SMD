@@ -9,5 +9,8 @@ chan = AnalogIn(ads, ADS.P1)
 
 def read_turbidity():
     voltage = chan.voltage
-    ntu = -1120.4 * (voltage ** 2) + 5742.3 * voltage - 4352.9
+    if(voltage >= 2.5):
+        ntu = -1120.4 * (voltage ** 2) + 5742.3 * voltage - 4353.8
+    else:
+        ntu = 3000
     return ntu

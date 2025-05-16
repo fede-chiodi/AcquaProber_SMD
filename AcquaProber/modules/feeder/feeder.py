@@ -27,12 +27,13 @@ class Feeder:
         # setting servo and initializing to starting position
         GPIO.setmode(GPIO.BCM) 
         GPIO.setup(servo_pin ,GPIO.OUT) 
-        self.__servo = GPIO.PWM(servo_pin, 50)   
+        self.__servo = GPIO.PWM(servo_pin, 50)  
 
     ## load settings from json
     def __load_data(self):
         with open(self.__filename, "r") as file:
             self.__datas = json.load(file)
+            print(self.__datas)
             self.__feeder_time = self.__datas["feeder_time"] ### feeder time is in seconds
             self.__opening_time = self.__datas["opening_time"]
             
@@ -63,7 +64,7 @@ class Feeder:
         self.__set_data("last_feed", datetime.datetime.now().strftime("%H:%M"))
         next_date = datetime.datetime.fromtimestamp(int(datetime.datetime.now().timestamp()) + self.__feeder_time)
         self.__set_data("next_feed", next_date.strftime("%H:%M"))
-        
+        print(f"{next_date}") 
         
     # opens feeder every __feeder_time seconds
     def run(self):
@@ -88,7 +89,6 @@ def feeder_worker(ipc_dict):
     feeder.stop()
     t1.join()
     print("Feeder process terminated correctly!!")
-
 
 
 

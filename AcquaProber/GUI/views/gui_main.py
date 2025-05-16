@@ -4,6 +4,7 @@ from PyQt5.QtCore import Qt, QTimer
 from GUI.views.sensor_window_ipc import SensorWindow
 from GUI.views.info_window import InfoWindow
 from GUI.views.plotter_window import PlotterWindow
+from GUI.views.feeder_window import FeederWindow
 import os
 
 class MainWindow(QMainWindow):
@@ -35,7 +36,7 @@ class MainWindow(QMainWindow):
             ("pH", "pH"),
             ("Turbidity", "NTU"),
             ("Temperature", "°C"),
-            ("Conductivity", "µs/cm")
+            ("TDS", "ppm")
         ]
         self.value_labels = {}
 
@@ -116,8 +117,6 @@ class MainWindow(QMainWindow):
         elif btn_name == "Sonda":
             self.plotter_window = PlotterWindow(shared_dict)
             self.plotter_window.show()
-        else:
-            dialog = QDialog(self)
-            dialog.setWindowTitle("PLACEHOLDER - TO DEVELOP")
-            dialog.setFixedSize(400, 300)
-            dialog.exec_()
+        elif btn_name == "Feeder":
+            self.feeder_window = FeederWindow()
+            self.feeder_window.show()

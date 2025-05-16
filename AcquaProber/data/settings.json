@@ -1,18 +1,1 @@
-{
-    "feeder_time:": 20,
-    "opening_time": 0.1,
-    "food_level": 20,
-    "last_feed": "00:00",
-    "next_feed": "00:00"
-}
-
-/*
-
-FEEDER LIMTIS:
-minimum feeder_time: 60 seconds
-maximum feeder_time: 3600 seconds
-
-minimum_opening_time: 0.1
-maximum_opening_time: 1s
-
-*/
+{"feeder_time": 30, "opening_time": 0.1, "food_level": 18, "last_feed": "17:50", "next_feed": "17:55"}

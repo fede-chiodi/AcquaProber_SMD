@@ -5,7 +5,7 @@ from modules.plotter.plotter import plotter_worker
 from modules.feeder.feeder import feeder_worker
 from modules.utility.utility import is_raspberry_pi
 
-if __name__ == "__main__" and is_raspberry_pi():
+if __name__ == "__main__":
     with Manager() as manager:
         shared_dict = manager.dict()
         shared_dict["status"] = True

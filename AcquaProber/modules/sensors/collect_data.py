@@ -12,7 +12,7 @@ def read_sensors():
         "pH": read_ph(),
         "Turbidity": read_turbidity(),
         "Temperature": read_temperature(),
-        "Conductivity": read_conductivity()
+        "TDS": read_conductivity()
      }
 
 def collect_data(shared_dict):

@@ -86,7 +86,7 @@ class Plotter:
                 self.__step_pos[1] += 1 if y_dir else -1
                 self.__stp1.step(x_dir)
                 self.__stp2.step(y_dir)
-                print(f"{self.__step_pos[0]} {self.__step_pos[1]} {x_dir} {y_dir}")
+                # print(f"{self.__step_pos[0]} {self.__step_pos[1]} {x_dir} {y_dir}")
                 
                 
                 

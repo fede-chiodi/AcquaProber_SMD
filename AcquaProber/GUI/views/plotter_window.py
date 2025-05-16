@@ -83,11 +83,11 @@ class PlotterWindow(QWidget):
 
     def update_y_pos(self, value):
         self.shared_dict["y_pos"] = value
-        print(f"y_pos updated: {value}")
+        #print(f"y_pos updated: {value}")
 
     def update_x_pos(self, value):
         self.shared_dict["x_pos"] = value
-        print(f"x_pos updated: {value}")
+        #print(f"x_pos updated: {value}")
 
     def closeEvent(self, event):
         self.shared_dict["mode"] = 0

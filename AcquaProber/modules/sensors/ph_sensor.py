@@ -10,4 +10,5 @@ chan = AnalogIn(ads, ADS.P0)
 def read_ph():
     voltage = chan.voltage
     ph = 7 + ((voltage - 2.5) / 0.18)
+    print(f"v: {voltage}, ph: {ph}")
     return ph
